@@ -9,7 +9,8 @@
         "lint": "eslint  --ext .ts",
         "lint:fix": "yarn lint --fix",
         "types": "tsc -d",
-        "types:bundle": "dts-bundle --name @lavaclient/queue --outputAsModuleFolder --main dist/index.d.ts --out ./index.d.ts --removeSource"
+        "types:bundle": "dts-bundle --name @lavaclient/queue --outputAsModuleFolder --main dist/index.d.ts --out ./index.d.ts --removeSource",
+        "prepare": "npm run build && npm run types:bundle"
     },
     "repository": {
         "type": "git",
