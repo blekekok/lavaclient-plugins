@@ -44,4 +44,14 @@ export class Song implements TrackInfo {
             this.sourceName = decoded.source!;
         }
     }
+
+    getThumbnail(): string {
+        switch (this.sourceName) {
+            case 'youtube':
+                return `https://i.ytimg.com/vi/${this.identifier}/mqdefault.jpg`;
+
+            default:
+                return 'https://t4.ftcdn.net/jpg/01/19/16/11/360_F_119161199_1OEtpWyaH7FWanhYiH4P17zsfs8j9EN0.jpg'
+        }
+    }
 }
